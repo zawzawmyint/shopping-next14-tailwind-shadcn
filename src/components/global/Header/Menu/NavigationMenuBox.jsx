@@ -8,6 +8,7 @@ import {
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 import CategoryLink from "@/components/s/CategoryBtn";
+import { Suspense } from "react";
 
 export function NavigationMenuBox({ path, name, category, className = "" }) {
   return (
@@ -23,15 +24,17 @@ export function NavigationMenuBox({ path, name, category, className = "" }) {
               </p>
             </Link>
           ) : (
-            <CategoryLink category={category}>
-              {
-                <p
-                  className={`p-2 mr-2 cursor-pointer hover:underline underline-offset-4 ${className}`}
-                >
-                  {name}
-                </p>
-              }
-            </CategoryLink>
+            <Suspense fallback={<div></div>}>
+              <CategoryLink category={category}>
+                {
+                  <p
+                    className={`p-2 mr-2 cursor-pointer hover:underline underline-offset-4 ${className}`}
+                  >
+                    {name}
+                  </p>
+                }
+              </CategoryLink>
+            </Suspense>
           )}
         </NavigationMenuItem>
       </NavigationMenuList>

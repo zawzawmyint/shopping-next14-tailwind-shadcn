@@ -13,6 +13,7 @@ import {
 import { firstLetterUppercase } from "@/utils/helper";
 import { SearchIcon } from "lucide-react";
 import { useRouter, useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 import { useDebouncedCallback } from "use-debounce";
 const terms = [
   "beauty",
@@ -53,7 +54,7 @@ export function SearchBar() {
       params.delete("query");
     }
     replace(`/s/?${params.toString()}`);
-  }, 300);
+  }, 500);
 
   return (
     <Sheet>
@@ -86,9 +87,11 @@ export function SearchBar() {
           <ScrollArea className="h-52 w-full my-3 py-3">
             {terms.map((term, i) => (
               <div key={i + term} className="p-2 cursor-pointer">
-                <CategoryLink category={term}>
-                  {firstLetterUppercase(term)}
-                </CategoryLink>
+                <Suspense>
+                  <CategoryLink category={term}>
+                    {firstLetterUppercase(term)}
+                  </CategoryLink>
+                </Suspense>
               </div>
             ))}
           </ScrollArea>

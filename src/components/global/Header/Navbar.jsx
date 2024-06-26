@@ -23,7 +23,7 @@ const Navbar = () => {
           <NavItems />
         </div>
         <div className="flex flex-wrap justify-center items-center gap-5">
-          <Suspense key={"search-bar"} fallback={<div></div>}>
+          <Suspense fallback={<div></div>}>
             <SearchBar />
           </Suspense>
           <Heart />
