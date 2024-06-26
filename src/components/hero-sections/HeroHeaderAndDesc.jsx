@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import CategoryLink from "../s/CategoryBtn";
 import { Button } from "../ui/button";
 
@@ -9,11 +10,13 @@ const HeroHeaderAndDesc = ({ message }) => {
       </h1>
       <p className="">{message.desc}</p>
       <div>
-        <CategoryLink category={message.category}>
-          <Button variant="" size="sm" className="rounded-lg">
-            Shop
-          </Button>
-        </CategoryLink>
+        <Suspense fallback={<div></div>}>
+          <CategoryLink category={message.category}>
+            <Button variant="" size="sm" className="rounded-lg">
+              Shop
+            </Button>
+          </CategoryLink>
+        </Suspense>
       </div>
     </div>
   );

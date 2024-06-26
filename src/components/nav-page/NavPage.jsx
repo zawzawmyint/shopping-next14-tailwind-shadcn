@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import CategoryLink from "../s/CategoryBtn";
 
 const NavPage = ({ data }) => {
@@ -7,9 +7,13 @@ const NavPage = ({ data }) => {
       <h3 className="font-semibold text-2xl">{data.text}</h3>
       <div className="flex flex-wrap justify-center items-center gap-5">
         {data.categories.map((p, i) => (
-          <CategoryLink key={p.name + i} category={p.category}>
-            <p className="font-semibold">{p.name}</p>
-          </CategoryLink>
+          <div key={p.name + i}>
+            <Suspense fallback={<div></div>}>
+              <CategoryLink category={p.category}>
+                <p className="font-semibold">{p.name}</p>
+              </CategoryLink>
+            </Suspense>
+          </div>
         ))}
       </div>
       <div className="w-20"></div>
