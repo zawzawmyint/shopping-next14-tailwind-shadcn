@@ -1,14 +1,16 @@
 "use client";
-import { Heart, SearchIcon, ShoppingBag } from "lucide-react";
+import { ShoppingBag } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Suspense } from "react";
 import { MobileSheet } from "./Menu/MobileSheet";
 import NavItems from "./Menu/NavItems";
+import FavoriteIcon from "./favs/FavoriteIcon";
 import { SearchBar } from "./searchBar/SearchBar";
-import { Suspense } from "react";
 
 const Navbar = () => {
   const pathName = usePathname();
+
   return (
     <div
       className={`p-3 py-5 sm:py-3 ${
@@ -26,7 +28,7 @@ const Navbar = () => {
           <Suspense fallback={<div></div>}>
             <SearchBar />
           </Suspense>
-          <Heart />
+          <FavoriteIcon />
           <ShoppingBag />
           <div className="sm:hidden">
             <MobileSheet />

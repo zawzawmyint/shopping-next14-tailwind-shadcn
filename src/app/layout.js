@@ -9,6 +9,7 @@ import Promotions from "@/components/global/Header/promotions/Promotions";
 import Footer from "@/components/global/footer/Footer";
 import { cn } from "@/lib/utils";
 import NextjsLoading from "@/components/global/loading/NextjsLoadingTop";
+import StoreProvider from "./StoreProvider";
 
 const fontSans = Public_Sans({
   subsets: ["latin"],
@@ -31,12 +32,14 @@ export default function RootLayout({ children }) {
           fontSans.variable
         )}
       >
-        <NextjsLoading />
-        <SubNav />
-        <Navbar />
-        <Promotions />
-        <Container>{children}</Container>
-        <Footer />
+        <StoreProvider>
+          <NextjsLoading />
+          <SubNav />
+          <Navbar />
+          <Promotions />
+          <Container>{children}</Container>
+          <Footer />
+        </StoreProvider>
       </body>
     </html>
   );
