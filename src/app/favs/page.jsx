@@ -5,7 +5,7 @@ import React, { Suspense } from "react";
 const Page = () => {
   return (
     <div>
-      <div className="my-7">
+      <div className="my-7 p-2">
         <h3 className="font-semibold text-2xl">Favorites</h3>
       </div>
       <Suspense key={"favorites"} fallback={<BannerLoading />}>

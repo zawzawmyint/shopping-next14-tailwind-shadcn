@@ -7,6 +7,7 @@ import { MobileSheet } from "./Menu/MobileSheet";
 import NavItems from "./Menu/NavItems";
 import FavoriteIcon from "./favs/FavoriteIcon";
 import { SearchBar } from "./searchBar/SearchBar";
+import BagIcon from "./bag/BagIcon";
 
 const Navbar = () => {
   const pathName = usePathname();
@@ -24,12 +25,12 @@ const Navbar = () => {
         <div className="hidden sm:block">
           <NavItems />
         </div>
-        <div className="flex flex-wrap justify-center items-center gap-5">
+        <div className="flex flex-wrap justify-center items-center gap-2">
           <Suspense fallback={<div></div>}>
             <SearchBar />
           </Suspense>
           <FavoriteIcon />
-          <ShoppingBag />
+          <BagIcon />
           <div className="sm:hidden">
             <MobileSheet />
           </div>

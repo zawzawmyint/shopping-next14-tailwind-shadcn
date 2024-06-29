@@ -5,24 +5,26 @@ import {
 } from "@/lib/features/favorites/favoritesSlice";
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
 import { Button } from "../ui/button";
+import { addTobags } from "@/lib/features/bags/bagsSlice";
+import CounterItemBtn from "../bag/BagItems/CounterItemBtn";
 
 const PDetailsButtons = ({ data }) => {
   const favorites = useAppSelector((state) => state.favorites.favorites);
-  console.log(favorites);
   const dispatch = useAppDispatch();
 
   const favIndex = favorites.findIndex((fav) => fav.id === data.id);
-  console.log(favIndex);
-  const addToCard = (p) => {
-    console.log("addToCard", p);
-  };
+
   return (
     <div>
-      <ButtonBtn text={"Add to Card"} handleClick={addToCard} />
+      <CounterItemBtn item={data} />
+      <ButtonBtn
+        text={"Add to Bag"}
+        handleClick={() => dispatch(addTobags(data))}
+      />
       {favIndex == -1 ? (
         <ButtonBtn
           variant={"secondary"}
-          text={"Favorite "}
+          text={"Favorite"}
           handleClick={() => dispatch(addToFavorites(data))}
         />
       ) : (

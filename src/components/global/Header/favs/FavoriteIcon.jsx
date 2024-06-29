@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { useAppSelector } from "@/lib/hooks";
 import { Heart } from "lucide-react";
 import Link from "next/link";
@@ -8,7 +9,10 @@ const FavoriteIcon = () => {
   return (
     <Link href={"/favs"}>
       <div className="flex flex-wrap gap-2">
-        <Heart /> {favorites?.length ? favorites.length : ""}
+        <Button variant="ghost" size="icon">
+          <Heart />
+        </Button>{" "}
+        {favorites?.length ? favorites.length : ""}
       </div>
     </Link>
   );
