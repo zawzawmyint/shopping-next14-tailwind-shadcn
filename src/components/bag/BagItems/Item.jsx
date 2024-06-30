@@ -22,6 +22,7 @@ const Item = ({ item, favs = false }) => {
           <div className="flex justify-between items-center font-semibold">
             <p>{item.title}</p>
             <p>
+              $
               {item.count > 1
                 ? (item.price * item.count).toFixed(2)
                 : item.price.toFixed(2)}

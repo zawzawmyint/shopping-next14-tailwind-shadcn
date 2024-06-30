@@ -8,6 +8,7 @@ export const bagsSlice = createSlice({
   name: "bags",
   initialState,
   reducers: {
+    resetBags: () => initialState,
     addTobags: (state, actions) => {
       // find index
       const index = state.bags.findIndex(
@@ -44,6 +45,7 @@ export const bagsSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { addTobags, removeFrombags, deleteFromBags } = bagsSlice.actions;
+export const { addTobags, removeFrombags, deleteFromBags, resetBags } =
+  bagsSlice.actions;
 
 export default bagsSlice.reducer;

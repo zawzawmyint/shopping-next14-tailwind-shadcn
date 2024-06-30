@@ -26,7 +26,7 @@ export function CarouselBanner({ items, bannerTitle, isCategory = false }) {
           delay: 5000,
         }),
       ]}
-      className="w-full px-3"
+      className="w-full px-3 my-14"
     >
       <div className="flex justify-between items-center my-5 ">
         <BannerTitle title={bannerTitle} />

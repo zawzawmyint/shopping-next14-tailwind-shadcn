@@ -16,9 +16,9 @@ const SHeader = async ({ query, cat }) => {
         ({results?.products?.length || 0})
       </h3>
       <div>
-        <Button variant="secondary" className="rounded-md">
+        {/* <Button variant="secondary" className="rounded-md">
           Filter
-        </Button>
+        </Button> */}
       </div>
     </div>
   );

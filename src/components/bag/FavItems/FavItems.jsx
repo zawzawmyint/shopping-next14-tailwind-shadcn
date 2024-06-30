@@ -14,7 +14,9 @@ const FavItems = () => {
             .slice(-2)
             .reverse()
             .map((item, i) => <Item key={item} item={item} favs />)}
-        {favorites.length === 0 && <div>No Favorite Items</div>}
+        {favorites.length === 0 && (
+          <div>There are no items saved to your favourites.</div>
+        )}
       </div>
       {favorites.length !== 0 && (
         <div className="p-2">

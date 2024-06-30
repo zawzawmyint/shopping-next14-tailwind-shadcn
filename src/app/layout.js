@@ -10,6 +10,7 @@ import Footer from "@/components/global/footer/Footer";
 import { cn } from "@/lib/utils";
 import NextjsLoading from "@/components/global/loading/NextjsLoadingTop";
 import StoreProvider from "./StoreProvider";
+import { Toaster } from "@/components/ui/toaster";
 
 const fontSans = Public_Sans({
   subsets: ["latin"],
@@ -39,6 +40,7 @@ export default function RootLayout({ children }) {
           <Promotions />
           <Container>{children}</Container>
           <Footer />
+          <Toaster />
         </StoreProvider>
       </body>
     </html>

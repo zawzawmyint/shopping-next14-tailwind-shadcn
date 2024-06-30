@@ -17,7 +17,11 @@ const Favorites = () => {
           ))}
         </div>
       )}
-      {favorites.length === 0 && <div className="p-2">No Favorites</div>}
+      {favorites.length === 0 && (
+        <div className="p-2">
+          Items added to your Favourites will be saved here.
+        </div>
+      )}
     </div>
   );
 };
