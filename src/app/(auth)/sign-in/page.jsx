@@ -13,13 +13,14 @@ const page = async () => {
   }
   return (
     <div className="text-center">
-      <h1 className="text-3xl font-bold ">Sign In</h1>
       <div className="flex flex-col gap-2  my-2">
+        <h1 className="text-3xl font-bold ">Join Us Now </h1>
+        <h1 className="text-xl font-semibold ">Sign In to your account</h1>
         <ClientSessionPage>
           <SignIn />
         </ClientSessionPage>
         <Link href={"/"}>
-          <Button>Shopping</Button>
+          <Button className="my-5"> Continute Shopping</Button>
         </Link>
       </div>
     </div>

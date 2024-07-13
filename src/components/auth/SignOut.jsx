@@ -5,7 +5,7 @@ export function SignOut() {
   return (
     <form action={logOut}>
       <Button variant="secondary" type="submit">
-        Sure
+        OK, SURE
       </Button>
     </form>
   );

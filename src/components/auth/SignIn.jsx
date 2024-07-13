@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 
 export function SignIn() {
   return (
-    <div className="flex gap-1 flex-wrap ">
+    <div className="flex gap-1 flex-wrap justify-center items-center ">
       <LogInWithOptions option={"github"} />
       {/* <LogInWithOptions option={"google"} />
       <LogInWithOptions option={"twitter"} /> */}

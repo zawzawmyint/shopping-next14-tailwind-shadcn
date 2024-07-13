@@ -1,7 +1,8 @@
 import { Separator } from "@/components/ui/separator";
-import { NavigationMenuBox } from "./NavigationMenuBox";
+import Image from "next/image";
 import { auth } from "../../../../../auth";
-import { LogOutIcon, User2Icon } from "lucide-react";
+import { NavigationMenuBox } from "./NavigationMenuBox";
+import { ProfileTooltip } from "../../profile/ProfileToolTip";
 
 const SubMenu = async () => {
   const session = await auth();
@@ -11,7 +12,11 @@ const SubMenu = async () => {
     { name: "Help", path: "/" },
     { name: "Join", path: "/" },
     {
-      name: !session?.user ? "Sign In" : <User2Icon size={16} />,
+      name: !session?.user ? (
+        "Sign In"
+      ) : (
+        <ProfileTooltip user={session?.user} />
+      ),
       path: !session?.user ? "/sign-in" : "/sign-out",
     },
   ];
