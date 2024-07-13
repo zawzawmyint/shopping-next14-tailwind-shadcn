@@ -9,8 +9,9 @@ import {
 } from "@/components/ui/carousel";
 import Image from "next/image";
 import { useState } from "react";
+import { cn } from "@/lib/utils";
 
-export function CarouselPDetails({ items }) {
+export function CarouselPDetails({ items, bag = false }) {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   const handleItemClick = (index) => {
@@ -21,7 +22,7 @@ export function CarouselPDetails({ items }) {
     <div className="flex gap-1">
       <Carousel
         orientation="vertical"
-        className="w-full basis-1/6 hidden sm:block "
+        className={cn("w-full basis-1/6 sm:block", { hidden: !bag })}
       >
         <CarouselContent className="aspect-square p-2">
           {items.map((item, index) => (
@@ -64,8 +65,8 @@ export function CarouselPDetails({ items }) {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="absolute  left-5 " />
-        <CarouselNext className="absolute  right-5 " />
+        {!bag && <CarouselPrevious className="absolute  left-5 " />}
+        {!bag && <CarouselNext className="absolute  right-5 " />}
       </Carousel>
     </div>
   );

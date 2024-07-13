@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import ItemButtons from "./ItemButtons";
+import { CarouselPDetails } from "@/components/products/CarouselPDetails";
 
 const Item = ({ item, favs = false }) => {
   const router = useRouter();
@@ -11,12 +12,13 @@ const Item = ({ item, favs = false }) => {
           className="basis-2/5 sm:basis-1/4 relative aspect-square  bg-secondary cursor-pointer"
           onClick={() => router.push(`/products/${item.id}/${item.category}`)}
         >
-          <Image
+          {/* <Image
             src={item.thumbnail}
             alt={item.title}
             fill
             className="rounded"
-          />
+          /> */}
+          <CarouselPDetails items={item.images} bag />
         </div>
         <div className="basis-3/5 sm:basis-3/4 px-2 flex flex-col gap-2 relative">
           <div className="flex justify-between items-center font-semibold">

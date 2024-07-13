@@ -14,10 +14,10 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
-import { SubmitButton } from "./SubmitButton";
-import { useAppDispatch } from "@/lib/hooks";
 import { resetBags } from "@/lib/features/bags/bagsSlice";
+import { useAppDispatch } from "@/lib/hooks";
 import FormTitle from "./FormTitle";
+import { SubmitButton } from "./SubmitButton";
 
 const FormSchema = z.object({
   firstName: z.string().min(2, {

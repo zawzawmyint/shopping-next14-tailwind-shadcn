@@ -1,6 +1,6 @@
 import Favorites from "@/components/favs/Favorites";
 import BannerLoading from "@/components/skeleton-fallback/BannerLoading";
-import React, { Suspense } from "react";
+import { Suspense } from "react";
 
 const Page = () => {
   return (

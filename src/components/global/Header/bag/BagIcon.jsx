@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { useAppSelector } from "@/lib/hooks";
 import { ShoppingBag } from "lucide-react";

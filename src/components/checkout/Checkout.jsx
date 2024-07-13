@@ -4,6 +4,7 @@ import Summary from "../bag/Summary/Summary";
 import BagHeader from "../bag/BagHeader";
 import OrderPopover from "./OrderPopover";
 import DeliverAndPickup from "./DeliverAndPickup";
+import ClientSessionPage from "../auth/ClientSessionPage";
 
 const Checkout = () => {
   return (

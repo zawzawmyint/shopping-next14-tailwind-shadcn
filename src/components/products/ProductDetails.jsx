@@ -10,7 +10,7 @@ import { wait } from "@/utils/helper";
 
 const ProductDetails = async ({ id }) => {
   const product = await getProductDetails(id);
-  // console.log(product);
+
   const reviews = product.reviews.map((review, i) => (
     <PDetailsReview key={i} review={review} />
   ));

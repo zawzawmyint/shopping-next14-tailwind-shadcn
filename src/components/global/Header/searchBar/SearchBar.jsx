@@ -1,3 +1,4 @@
+"use client";
 import CategoryLink from "@/components/s/CategoryBtn";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";

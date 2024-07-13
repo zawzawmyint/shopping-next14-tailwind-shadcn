@@ -2,7 +2,6 @@ import Image from "next/image";
 import React from "react";
 
 const OrderItems = ({ bags }) => {
-  console.log(bags);
   return (
     <div>
       <h3 className="my-10 font-semibold">Arrives Fri, Jul 12 - Tue, Jul 16</h3>
