@@ -19,9 +19,9 @@ const page = async () => {
         <h1 className="text-xl font-semibold ">
           Please click the SURE button to logout. Thank you.
         </h1>
-        <ClientSessionPage>
-          <SignOut />
-        </ClientSessionPage>
+        {/* <ClientSessionPage> */}
+        <SignOut />
+        {/* </ClientSessionPage> */}
         <Link href={"/"}>
           <Button className="my-5"> Continute Shopping</Button>
         </Link>

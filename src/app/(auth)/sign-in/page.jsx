@@ -16,9 +16,9 @@ const page = async () => {
       <div className="flex flex-col gap-2  my-2">
         <h1 className="text-3xl font-bold ">Join Us Now </h1>
         <h1 className="text-xl font-semibold ">Sign In to your account</h1>
-        <ClientSessionPage>
-          <SignIn />
-        </ClientSessionPage>
+        {/* <ClientSessionPage> */}
+        <SignIn />
+        {/* </ClientSessionPage> */}
         <Link href={"/"}>
           <Button className="my-5"> Continute Shopping</Button>
         </Link>
