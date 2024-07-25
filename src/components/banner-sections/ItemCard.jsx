@@ -8,7 +8,12 @@ const ItemCard = ({ item, banner = false }) => {
     <div className="mb-10">
       <MotionDiv>
         <div className=" aspect-square relative bg-secondary">
-          <Image src={item.thumbnail} alt={item.title} fill />
+          <Image
+            src={item.thumbnail}
+            alt={item.title}
+            fill
+            className=" hover:scale-105 transition-all duration-500"
+          />
         </div>
       </MotionDiv>
 

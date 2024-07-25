@@ -18,7 +18,7 @@ const NavItems = () => {
             path={item.path}
             name={item.name}
             category={item.category}
-            className={"text-md font-semibold  "}
+            className={"text-md font-semibold"}
           />
         </div>
       ))}

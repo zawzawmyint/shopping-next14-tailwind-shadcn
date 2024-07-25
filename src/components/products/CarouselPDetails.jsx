@@ -60,7 +60,7 @@ export function CarouselPDetails({ items, bag = false }) {
                 src={item}
                 alt="details-image"
                 fill
-                className="rounded bg-secondary"
+                className="rounded bg-secondary hover:scale-105 transition-all duration-500"
               />
             </CarouselItem>
           ))}
